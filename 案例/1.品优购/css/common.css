@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?tomleg');
+    src:  url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?tomleg') format('truetype'),
+      url('../fonts/icomoon.woff?tomleg') format('woff'),
+      url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+.w {
+    width:1200px;
+    margin:0 auto;
+}
+/* 导航开始 */
+.header {
+    height: 30px;
+    width: 100%;
+    background-color: #f1f1f1;
+    line-height: 30px;
+}
+
+.a_red {
+    color: #C81623;
+}
+
+.a1 {
+    float: left;
+    margin-right: 15px;
+}
+
+.a2 {
+    float: left;
+}
+
+.a3 {
+    width: 635px;
+    height: 30px;
+    float: right;
+   
+}
+.a3 ul li{
+    float: left;
+    margin:10px 6px;
+    line-height: 10px;
+}
+.a3 ul li:nth-child(even){
+    height: 10px;
+    width: 1px;
+    background-color: #666666;   
+}
+.iicon::after{
+    font-family: 'icomoon';
+    content: "\e91e";
+}
+/* 导航结束 */
+/* logo栏开始 */
+.logo_search{
+    position: relative;
+    top:27px;
+
+}
+.logo{
+    position: absolute;
+}
+
+.logo a{
+    position: absolute;
+    font-size: 0;
+      height: 61px;
+      width: 171px;
+      background:url(../images/logo.png) no-repeat;
+
+    }
+    .searchh {   
+        position: absolute;
+        left: 347px;
+        width:537px;
+        height:35px;
+
+    }
+    .searchh input{
+        width:455px;
+        height:35px;
+        margin: 0px;    float: left;
+    }
+.searchh button{
+    width: 82px;
+    height: 35px;
+    display:inline-block;
+    background-color: #B1191A;
+    color: white;
+    margin: 0px;
+    border: 0px;
+
+}
+.searchh .hot{
+    position: absolute;
+    width: 485px;
+    height: 23px;
+    line-height: 23px;
+ 
+}
+.searchh .hot li{
+    float: left;
+    padding:0  10px ;
+}
+.shop{
+    position: absolute;
+    width: 139px;
+    height: 36px;
+    border: 1px #dfdfdf solid;
+    background-color: #f7f7f7;
+    right: 66px;
+    line-height: 36px;
+    text-align: center;
+  
+ 
+}
+.shop::before{
+    content: "\e93a";
+    font-family: 'icomoon';
+    color: #b1191a;
+    margin-right: 5px;
+}
+.shop::after{
+    content: "\e920";
+    font-family: 'icomoon';
+    right: 10px;
+}
+.count{
+    position: absolute;
+    height: 16px;
+    background-color: #E60012;
+    color: white;
+    line-height: 16px;
+    top: -5px;
+    padding: 0 5px;
+    border-radius: 50%  50%  50% 0;
+}
+/* logo栏结束  */
+/* nav栏开始 */
+.nav{
+    position: relative;
+    width: 100%;
+    height: 47px;
+    border-bottom: 2px solid #B1191A;
+    margin-top: 105px;  
+}
+/* 全部商品分类 */
+.dt{
+    position: absolute;
+    float: left;
+    width: 210px;
+    height: 45px;
+    background-color:#B1191A ;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height:45px ;
+}
+/* 商品详细 */
+.dd{
+    top:45px;
+    position: absolute;
+    border-top:2px solid  #B1191A ;
+    width: 210px;
+    height: 465px;
+    background-color: #C81623;   
+    padding-left: 1px;
+}
+.dd li{
+    position: relative;
+    height: 31px;
+    padding-left: 7px;
+    line-height: 31px;
+}
+.dd li::after{
+    position: absolute;
+    content: "\e920";
+    font-family: 'icomoon';
+    font-size: 14px;
+    left:185px;
+    color: white;
+}
+.dd a{ 
+    color: white;
+    font-size: 14px; 
+}
+.dd li:hover {
+    background-color: white;
+}
+.dd li:hover a{
+    color: #CF3843;
+}
+.nav .nav_cen{
+    float: left;
+    margin-left:220px;
+    width:710px ;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.nav .nav_cen li{
+    float: left;
+    padding: 0 15px;
+}
+
+/* nav栏结束 */
+
+
+/* footer开始  */
+/* 服务模块开始 */
+.footer{
+    padding: 30px;
+    width: 100%;
+    height: 416px;
+    background-color: #f5f5f5;
+ 
+}
+.footer .mod_service{
+    height: 80px;
+    border-bottom: 2px solid #ededed;
+}
+.mod_service li{
+    float: left;
+    width: 300px;
+    height: 50px;
+    padding-left: 35px;
+}
+.mod_service li h5{
+    float: left;
+    width: 52px;
+    height: 50px;  
+    background: url(../images/icons.png) no-repeat -251px -2px;
+}
+.footer .mod_service h4{
+   font-size: 14px;
+}
+.footer .mod_service p{
+    font-size: 12px;
+ }
+ /* 服务模块结束 */
+
+
+ /* 帮助模块开始 */
+.mod_help{
+    width: 1200px;
+    height: 168px;
+    border-bottom: 2px solid #ededed;;
+    margin-top:20px;
+}
+.mod_help dl{
+    float: left;
+    width: 145px;
+    height: 158px;
+    margin-left:50px;
+}
+.mod_help dt{
+   font-size: 16px; 
+   padding-bottom: 15px;
+}
+
+ /* 帮助模块结束 */
+
+/* 版权模块开始 */
+.mod_copyright .mm{
+    margin: 15px auto;
+    text-align: center;
+}
+.mod_copyright p{
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 版权模块结束 */
+
+
+
+
+
+
+/* footer结束  */
+
+
+
+

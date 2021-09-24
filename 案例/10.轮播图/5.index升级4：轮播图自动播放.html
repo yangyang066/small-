@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script/index2.js"></script>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .main {
+        width: 980px;
+        height: 455px;
+        margin-top: 8px;
+        margin-left: 220px;
+    }
+
+    .main .pre {
+        position: absolute;
+        margin-top: 177px;
+        width: 40px;
+        height: 70px;
+        background: url(upload/icon-slides.png) no-repeat -83px 0;
+        z-index: 999;
+    }
+
+    .main .nex {
+
+        position: absolute;
+        width: 40px;
+        height: 70px;
+        background: url(upload/icon-slides.png) no-repeat -125px 0;
+        margin-top: 177px;
+        right: 0;
+        z-index: 999;
+    }
+
+    .main .pre:hover {
+        background: url(upload/icon-slides.png) no-repeat 0px 0;
+    }
+
+    .main .nex:hover {
+        background: url(upload/icon-slides.png) no-repeat -42px 0;
+    }
+
+    .pointer {
+        position: absolute;
+        z-index: 999;
+        right: 35px;
+        bottom: 26px;
+    }
+
+    .pointer a {
+        float: left;
+        width: 6px;
+        height: 6px;
+        background-color: rgba(0, 0, 0, .4);
+        border: 2px rgba(255, 255, 255, .3) solid;
+        margin-left: 8px;
+        border-radius: 50%;
+        background-clip: padding-box;
+    }
+
+    .lb .pointer a:hover,
+    .lb .pointer a.active {
+        background-color: #fff;
+    }
+
+    .main .lb {
+        position: relative;
+        float: left;
+        width: 721px;
+        height: 455px;
+
+    }
+
+    .main .lb li {
+        position: absolute;
+
+        /* 设置图片切换时有淡出淡入的效果 
+                     淡出 opacity 1-->0
+                     淡入 opacity 0==>1 
+        */
+        transition: opacity 1s;
+        /*  当opacity属性发生变化时才生效*/
+        opacity: 0;
+    }
+
+    .main .lb li:first-child {
+        z-index: 1;
+        opacity: 1
+    }
+</style>
+
+<body>
+    <div class="main ">
+
+        <div class="lb">
+            <ul>
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb1.png" alt=""></a></li><!-- li[0] -->
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb2.png" alt=""></a></li><!-- li[1] -->
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb3.png" alt=""></a></li><!-- li[2] -->
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb4.png" alt=""></a></li><!-- li[3] -->
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb5.png" alt=""></a></li><!-- li[4] -->
+            </ul>
+            <div class="pre"></div>
+            <div class="nex"></div>
+            <div class="pointer">
+                <a class="active" href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

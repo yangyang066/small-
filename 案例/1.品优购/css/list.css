@@ -1,0 +1,43 @@
+.sk{
+    position:absolute;
+    height: 31px;
+    width:87px;
+    border-left: 1px solid #b1191a;
+    line-height: 31px;
+    text-align: center;
+    left: 184px;
+    top: 12px;
+}
+.nav .nav_ll{
+    float: left;
+}
+
+.nav .nav_ll a{
+    display: inline-block;
+    font-weight: 700;
+    line-height:46px ;
+    padding: 0 28px;
+    color: black;
+    font-size: 16px;
+}
+.nav_rr li{
+    float: left;
+}
+.nav_rr a{
+    display: inline-block;
+    padding: 13px 21px;
+    font-size: 14px;
+}
+.nav_rr a:last-child ::after{
+    content: "\e91e";
+    font-family: 'icomoon';
+}
+.abc li{
+    float: left;
+    border: 1px solid transparent; 
+    width: 290px;
+    overflow: hidden; 
+}
+.abc li:hover{
+    border:1px solid #E12228;
+}

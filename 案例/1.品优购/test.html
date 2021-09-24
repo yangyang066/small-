@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 创建10个a标签，点击时弹出响应索引 -->
+    <a href="#">a1</a>
+    <a href="#">a2</a>
+    <a href="#">a3</a>
+    <a href="#">a4</a>
+    <a href="#">a5</a>
+    <a href="#">a6</a>
+    <a href="#">a7</a>
+    <a href="#">a8</a>
+    <a href="#">a9</a>
+    <a href="#">a10</a>
+    <script>
+        let a = document.querySelectorAll('a')
+        for (let i = 0; i <= a.length; i++) {
+            a[i].addEventListener('click', function () {
+                console.log(i)
+            })
+        }
+    </script>
+</body>
+
+</html>

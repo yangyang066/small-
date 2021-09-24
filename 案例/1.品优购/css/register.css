@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?so0zpl');
+    src: url('../fonts/icomoon.eot?so0zpl#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?so0zpl') format('truetype'),
+        url('../fonts/icomoon.woff?so0zpl') format('woff'),
+        url('../fonts/icomoon.svg?so0zpl#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 用CSS3盒子模型padding和border不会撑大盒子 */
+    box-sizing:border-box;
+}
+.w {
+    width:1200px;
+    margin:0 auto;
+}
+.nav{
+    height: 84px;
+    border-bottom: 2px solid #AF191B;
+    line-height: 84px;
+}
+
+.main{
+    width: 100%;
+    height: 523px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.main .main_1{
+    width: 100%;
+    height: 40px;
+    background-color:#ECECEC ;
+    line-height: 40px;
+    font-size: 18px;
+    padding-left: 7px;
+}
+.main .main_1 p{
+    float: right;
+    font-size: 14px;
+    padding-right: 12px;
+
+}
+.a_red{
+    color: #CA1423;
+}
+.main .main_2{
+    position: relative;
+    padding-left: 310px;
+    padding-top:35px;
+    font-size: 14px;
+}
+.main .main_2 li{
+    padding-bottom: 25px;
+}
+.main .main_2 label{
+    width: 88px;
+    display: inline-block;
+    text-align: right;
+}
+.main .main_2 input[class^=input1]{
+    width: 241px;
+    height: 35px;
+    vertical-align:center;
+    margin:0 6px;
+}
+.main_2 .cc1{
+    display: inline-block;
+    position: absolute;
+    width: 83px;
+    height: 20px;
+    background-color: white;
+    line-height: 20px;
+    left: 565px;
+    margin-top: 8px;
+}
+#wjmm {
+    position: absolute;
+    height: 20px;
+    font-size: 9px;
+     left: 20px;
+    border-left: 1px solid rgba(141, 140, 140, 0.795);
+    padding-left: 10px;
+}
+#yj {
+    display: inline-block;
+    position: absolute;
+    font-family: 'icomoon';
+    color: rgba(141, 140, 140, 0.795);
+    user-select: none;
+}
+.main .main_2 span[class^=test]{
+       font-size: 10px;
+       color: rgb(155, 151, 151);
+}
+.main .main_2 input[class^=input12]{
+    width: 100px;
+    height: 35px;
+    vertical-align:center;
+    margin:0 6px;
+}
+.main_2 .resendbtn{
+    width: 130px;
+    height: 35px;
+    margin-right: 5px;
+}
+/* 验证表单开始 */
+.main .main_2 .error{
+    font-size:12px ;
+    color: #CA1423;
+}
+.main .main_2 .error::before{
+    display: inline-block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png) no-repeat;
+     vertical-align: middle;
+     margin-right: 5px;
+}
+
+.main .main_2 .success{    
+    font-size:12px ;
+    color: green;
+}
+.main .main_2 .success::before{
+    display: inline-block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url(../images/success.png) no-repeat;
+     vertical-align: middle;
+     margin-right: 5px;
+}
+
+/* 验证表单结束 */
+
+.main_2 .li4{
+    padding-left: 170px;
+   
+}
+.ruo,.zhong,.qiang{
+    display: inline-block;
+    font-size: 12px;
+    width: 34px;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 10px;
+ 
+    color: white;
+   
+}
+.ruo{
+    background-color:#DD1112 ;
+}
+.zhong{
+    background-color:#40B741 ;
+}
+.qiang{
+    background-color:#F89408 ;
+}
+.input2{
+    vertical-align: middle;
+    margin-left: 100px;
+
+}
+.main_2 .sub{
+    width: 200px;
+    height: 35px;
+    background-color: #C81622;
+    color: white;
+    border:0px;
+    margin: 9px 100px;
+    
+}
+/* 版权模块开始 */
+.mod_copyright .mm{
+    margin: 15px auto;
+    text-align: center;
+}
+.mod_copyright p{
+text-align: center;
+}
+
+
+
+/* 版权模块结束 */

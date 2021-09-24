@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        window.onload = function () {
+            //1.当点击   全选/全不选  按钮时 给 hobby对象添加属性checked，属性值为checked
+            let two = document.getElementById('two')
+            let hobby = document.getElementsByName('hobby')
+            two.onclick = function () {
+                for (let i = 0; i < hobby.length; i++) {
+                    hobby[i].checked = two.checked;
+                }
+
+            }
+            //2.当点击全选按钮时
+            let qx = document.getElementById('qx')
+            qx.onclick = function () {
+                two.checked = true;
+                for (let i = 0; i < hobby.length; i++) {
+                    hobby[i].checked = true;
+                }
+            }
+            //3.当点去全不选按钮时
+            let qbx = document.getElementById('qbx')
+            qbx.onclick = function () {
+                two.checked = false;
+                for (let i = 0; i < hobby.length; i++) {
+                    hobby[i].checked = false;
+                }
+
+            }
+            //4.反选按钮时
+            let fx = document.getElementById('fx')
+            fx.onclick = function () {
+                for (let i = 0; i < hobby.length; i++) {
+                    hobby[i].checked = !hobby[i].checked;
+                }
+                //获取所有状态为checked的
+                let sum = document.querySelectorAll('[name=hobby]:checked')
+                // console.log(sum.length)
+                //判断被选中的元素的长度和hobby的总长度是否相等，如果相等就是全选，如果不相等就不是全选
+
+                two.checked = sum.length === hobby.length;
+            }
+
+            //5.判断hobby是否有未被选中的，如果有two为false
+            for (let i = 0; i < hobby.length; i++) {
+                hobby[i].onclick = function () {
+                    //获取所有状态为checked的
+                    let sum = document.querySelectorAll('[name=hobby]:checked')
+                    // console.log(sum.length)
+                    //判断被选中的元素的长度和hobby的总长度是否相等，如果相等就是全选，如果不相等就不是全选
+
+                    two.checked = sum.length === hobby.length;
+                }
+            }
+            //6.sub提交按钮 输出被选中的文字
+            let sub = document.getElementById('sub')
+            sub.onclick = function () {
+                for (let i = 0; i < hobby.length; i++) {
+                    if (hobby[i].checked == true) {
+                        alert(hobby[i].value)
+                    }
+                }
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <p>你爱好的运动是？<input type="checkbox" id="two">全选/全不选</p>
+    <p id="a"><input type="checkbox" name="hobby" value="足球">足球
+        <input type="checkbox" name="hobby" value="篮球">蓝球
+        <input type="checkbox" name="hobby" value="羽毛球">羽毛球
+        <input type="checkbox" name="hobby" value="乒乓球">乒乓球
+    </p>
+    <button id="qx">全选</button>
+    <button id="qbx">全不选</button>
+    <button id="fx">返选</button>
+    <button id="sub">提交</button>
+
+</body>
+
+</html>

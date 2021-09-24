@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-left: 50px;
+            float: left;
+            list-style: none;
+            perspective: 500px;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 50px;
+            margin: 100px auto;
+            text-align: center;
+            line-height: 50px;
+            transition: all .4s;
+            transform-style: preserve-3d;
+        }
+
+        .a,
+        .b {
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(165, 44, 64);
+        }
+
+        .a {
+            background-color: pink;
+            z-index: 1;
+            transform: translateZ(25px);
+        }
+
+        .b {
+            /* 我们如果有移动 或者其他样式，必须先写我们的移动 */
+            transform: translateY(25px) rotateX(-90deg);
+        }
+
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>
+            <div class="box">
+                <div class="a">第一个盒子</div>
+                <div class="b">第二个盒子</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="a">第一个盒子</div>
+                <div class="b">第二个盒子</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="a">第一个盒子</div>
+                <div class="b">第二个盒子</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="a">第一个盒子</div>
+                <div class="b">第二个盒子</div>
+            </div>
+        </li>
+    </ul>
+
+</body>
+
+</html>

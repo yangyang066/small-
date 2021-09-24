@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .black {
+            position: absolute;
+            height: 300px;
+            background-image: url(media/bg2.png);
+            opacity: 0.2;
+            width: 1520px;
+            overflow: hidden;
+            animation: ss 10s infinite linear;
+
+        }
+
+        .s {
+            position: relative;
+            overflow: hidden;
+            width: 1520px;
+            height: 500px;
+            background: url(media/bg1.png) repeat-x;
+            animation: ss 5s infinite linear;
+        }
+
+
+        .box {
+            top: 234px;
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background: url(media/bear.png) no-repeat;
+            animation: aa 0.3s steps(8) infinite, bb 3s forwards;
+        }
+
+        @keyframes aa {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1600px 0;
+            }
+
+
+        }
+
+        @keyframes bb {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 50%;
+                /* margin-left: -100px; */
+                transform: translateX(-50%);
+            }
+
+        }
+
+        @keyframes ss {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -3840px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="black">
+    </div>
+    <div class="s">
+        <div class="box">
+        </div>
+    </div>
+</body>
+
+</html>

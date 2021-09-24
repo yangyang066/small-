@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w {
+            width: 600px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #enter {
+            width: 560px;
+            height: 28px;
+            border: 1px solid #ccc;
+            padding: 4px 7px;
+            border-radius: 10px;
+        }
+
+        ul {
+            border: 1px solid #ccc;
+            padding: 0;
+            border-radius: 10px;
+        }
+
+        li {
+            height: 36px;
+            list-style: none;
+            padding: 0 5px;
+            border-bottom: 1px solid #ccc;
+            line-height: 36px;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .btn {
+            display: block;
+            float: right;
+            margin-top: 3px;
+            color: #fff;
+            background-color: #da4f49;
+            border: 1px solid #bd362f;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        .bottom {
+            padding: 10px 5px;
+        }
+
+        .okk {
+            margin-left: 8px;
+        }
+
+        .delOne {
+            display: none;
+        }
+
+        .delAll {
+            margin-top: -6px;
+        }
+    </style>
+</head>
+
+<body>
+    敲下回车增加新任务
+    <div class="w">
+        <input id="enter" type="text" placeholder="请输入你的任务名称，按回车键确认">
+        <ul id="list">
+            <!-- 在此添加 -->
+        </ul>
+        <div class="bottom">
+            <input id="checkAll" type="checkbox">
+            <span class="okk">已完成</span>
+            <span id="okNum">0</span>
+            <span>/全部</span>
+            <span id="allNum">2</span>
+            <button class="btn delAll">清除已完成任务</button>
+        </div>
+    </div>
+    <script src="js/jquery-1.10.1.js"></script>
+    <script>
+        $(function () {
+            var $listli = [
+                {
+                    action: '吃饭'
+                },
+                {
+                    action: '睡觉'
+                },
+                {
+                    action: '学习'
+                },
+
+
+            ]
+            // 动态绑定任务
+            bindData($listli)
+            function bindData(data) {
+                for (var i = 0; i < data.length; i++) {
+                    $('#list').append('<li><label><input id="checkOne" type="checkbox">'
+                        + data[i].action +
+                        '</label><button class="btn delOne">删除</button></li>')
+                }
+            }
+
+            // 更新任务总数
+            countAll()
+            function countAll() {
+                $('#allNum').html($('#list li').length)
+            }
+
+            // 更新已完成任务总数
+            function okNum() {
+                $('#okNum').html($('#list').find(':checkbox:checked').length)
+                // console.log($('#list').find(':checkbox:checked').length)
+            }
+
+            // 添加全选和全不选
+            $('#checkAll').on('click', function () {
+                $('#list :checkbox').prop('checked', this.checked)
+                // 更新已完成总数
+                okNum()
+            })
+
+            // 单击某个复选框时   （事件委托）
+            $('#list').on('click', 'input', function () {
+                okNum()
+                // 如果 被点击的总数 等于 $listli 的长度 已完成前的复选框checkAll被选中true，如果不等于false
+                $('#checkAll').prop('checked', $('#list').find(':checkbox:checked').length === $('#list li').length)
+            })
+
+            // 添加滑动事件，滑入li 删除按钮出现，li背景色变成灰色  (事件委托)
+            $('#list').on('mouseenter', 'li', function () {
+                $(this).children('button').show()
+                $(this).css('background', '#ccc');
+            })
+            $('#list').on('mouseleave', 'li', function () {
+                $(this).children('button').hide()
+                $(this).css('background', '');
+            })
+
+            // 点击li后面的删除按钮，删除该行li  (事件委托)
+            $('#list').on('click', 'li button', function () {
+                // console.log($(this))
+                $(this).parent().remove()
+                // 更新任务总数
+                countAll()
+                // 更新已完成数
+                okNum()
+            })
+
+            // 敲下回车时输出enter框里的value值
+            $('#enter').keyup(function (event) {
+                // 判断是否按下回车
+                if (event.keyCode === 13) {
+                    // 判断是否为空
+                    var $enterVal = $(this).val()
+                    if ($enterVal.trim()) {
+                        var newDat = [
+                            {
+                                action: $enterVal
+                            }
+                        ]
+                        bindData(newDat)
+                    } else {
+                        alert('请不要输入空信息')
+                    }
+
+                    // 敲下回车时，已完成按钮一定是未选择
+                    $('#checkAll').prop('checked', false)
+                    // 更新任务总数
+                    countAll()
+                    // 更新已完成任务总数
+                    okNum()
+                }
+            })
+            // 清除选中的总任务
+            $('.delAll').on('click', function () {
+                $('#list input').filter(':checked').parent().parent().remove()
+                // 更新任务总数
+                countAll()
+                // 更新已完成任务总数
+                okNum()
+            })
+        })
+    </script>
+</body>
+
+</html>

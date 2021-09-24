@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tiao {
+            width: 500px;
+            height: 200px;
+            background-color: chartreuse;
+            overflow: auto;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            // //点击测试按钮输出 滚动条可滚高度 、 滚动条
+            // document.getElementById('cs').onclick = function () {
+            //     let gHeight = document.getElementById('tiao').scrollHeight;  //获取对象可滚动的高度
+            //     let wenbenH = document.getElementById('tiao').clientHeight;  //可见区域高 200px
+            //     let gTop = document.getElementById('tiao').scrollTop;  //获取或设置对象已纵向滚动的距离            
+            //     console.log(gHeight)
+            //     console.log(wenbenH)
+            //     console.log(gTop)
+            // }
+            // 获取两个按钮的id
+            let t1 = document.getElementById('t1')
+            let t2 = document.getElementById('t2')
+            //获取div
+            let tiao = document.getElementById('tiao')
+            //onscroll 会在元素的滚动条滚动的时候触发
+            tiao.onscroll = function () {
+                let gHeight = tiao.scrollHeight;  //获取对象可滚动的高度
+                let wenbenH = tiao.clientHeight;  //可见区域高 200px
+                let gTop = tiao.scrollTop;  //获取或设置对象已纵向滚动的距离   
+                if (Math.floor(gHeight - gTop) === wenbenH) {
+                    // console.log('我滚完了~')
+                    t1.disabled = false;
+                    t2.disabled = false;
+                }
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>欢迎注册，请仔细阅读以下协议：</h1>
+    <div id="tiao">
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+        亲爱的用户，请一定要看完并且遵守我们的协议，要不然就别注册
+    </div>
+    <input type="checkbox" name="" id="t1" disabled>我已仔细阅读，并严重同意以上协议
+    <button disabled id="t2">注册</button>
+</body>
+
+</html>

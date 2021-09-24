@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 650px;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    color: #666;
+
+}
+/*点击高亮我们需要清除清除  设置为transparent 完成透明*/
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/*在移动端浏览器默认的外观在iOS上加上这个属性才能给按钮和输入框自定义样式*/
+
+input {
+    -webkit-appearance: none;
+}
+
+
+/*禁用长按页面时的弹出菜单*/
+
+img,
+a {
+    -webkit-touch-callout: none;
+}
+.app{
+    width: 100%;
+    height: 45px;
+    background-color: #333333;  
+    line-height: 45px;
+    text-align: center;   
+
+}
+.app li{
+   float: left;
+   list-style: none;
+
+}
+.app li:nth-child(1){
+    vertical-align:middle;
+    width: 8%;
+    height: 45px;
+}
+.app  li:nth-child(1) img{
+width: 10px;
+}
+.app li:nth-child(2) img{
+    width: 30px;  
+ vertical-align:middle;
+}
+.app li:nth-child(2){
+    width: 10%;   
+    height: 45px;
+}
+.app li:nth-child(3){
+    width: 57%;  
+     height: 45px;
+    color: white;
+}
+.app li:nth-child(4){
+    width:25%;   
+    height:45px;
+    color: white;
+    background-color: #F63515;
+}
+.jd{
+    position: fixed;
+    width: 100%;
+    height: 44px;
+    min-width: 320px;
+    max-width: 640px;
+}
+.jd_1{
+    position: absolute;    
+}
+.jd_1 img{
+    width: 20px;
+    height: 18px;
+margin: 12px 0 12px 15px  ;
+}
+.jd_2{
+    position: relative;
+      height: 30px;
+     background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 6px;
+      border-radius: 15px;
+  }
+  .jd_2 .a{
+      position: absolute;
+      width: 20px;
+  }
+.jd_2 img{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 20px;
+    height: 15px;
+}
+.jd_2 .a::after{
+    position: absolute;
+    content: "";   
+    width: 1px;
+    height: 15px;
+    top: 8px;
+    left: 35px;
+    background-color: gray;
+}
+.jd_2 .b{
+    position: absolute;
+    width: 20px;
+    height: 18px;
+     left: 43px;
+    top: 8px;
+    background: url(../images/jlt.png) no-repeat -80px  0px;
+    background-size: 200px auto;
+
+   
+}
+.jd_3{ 
+    position: absolute; 
+    top: 0px;
+    right: 0;
+    width: 50px;
+ height: 44px;
+    color: white;  
+    line-height: 44px;
+      text-align: center;
+    
+}
+.lb img{
+    vertical-align: top;
+    height: 240px;
+    width: 100%;
+}
+.floor3{
+    height: 123px;
+    width: 100%;
+
+}
+ 
+.floor3 img{
+    height: 123px;
+    float: left;
+    width: 33.33%;
+}
+.floor4 {
+    overflow: hidden;
+}
+.floor4 li{
+    float: left;
+    list-style: none;
+    height: 80px;
+    width: 20%;
+    background-color: white;
+    text-align: center;
+    margin: 10px 0px;
+}
+.floor4 li img{
+    width:40px ;
+    height: 40px;
+   
+}
+
+.floor5 img{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+.floor5 img:nth-child(1){
+    width: 50%;
+}
+.floor5 img:nth-child(2){
+    width: 25%;
+    border-left: 1px solid gray;
+}
+.floor5 img:nth-child(3){
+    border-left: 1px solid gray;
+    width: 25%;
+}

@@ -1,0 +1,141 @@
+
+body{
+    
+    margin: 0 auto;
+    background-color: #f5f5f5;
+
+}
+@media screen and (min-width:1280px) {
+    .container{
+        width: 1280px;
+    }
+    
+}
+
+ 
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+
+}
+a{
+    text-decoration: none!important;
+}
+.container{
+  background-color: white;
+}
+.col-md-2{
+      padding-left: 0px!important;
+}
+.col-md-2 .visible-xs{
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: white;
+    background-color: blue;
+}
+ .logo{
+      background-color: blue;
+  }
+  .logo img{
+      display: block;
+      margin: 0 auto;
+      /* 当父级宽度小于自身宽度时用父级宽度，当大于自身宽度时用自身宽度 */
+      max-width: 100%;
+      
+  }
+  .nav{
+      background-color: #eee;
+      border-bottom: 1px solid #ccc;
+
+  }
+  .nav a{
+      display: block;
+       padding :  20px  0 10px 30px;
+       font-size: 17px;
+       color: black;
+  }
+  
+ @media screen and (max-width:990px) {
+     .nav a{
+         float: left;
+         width: 20%;
+         font-size: 14px;
+     } 
+ }
+
+ @media screen and (max-width:768px) {
+     .gg  ul li:nth-child(1){
+    width: 100%!important;
+}
+.gg  ul li{
+    width: 50%;
+}
+.col-sm-9 h3{
+    font-size: 14px!important;
+}
+ }
+ 
+  .nav li{
+ display: inline-block;
+
+  }
+  .nav a:hover{
+      background-color: white;
+  }
+ 
+ .gg li{
+     float: left;
+     padding-right: 10px;
+     margin-bottom: 10px;
+     
+ }
+  .gg  ul li:nth-child(1){
+       width: 50% ;
+       height: 266px;
+  }
+  .gg ul li img{
+      width: 100%;
+      height: 100%;
+  }
+
+ .gg li{
+     width: 25%;
+     height: 128px;
+ }
+ .wz .row{
+     border-top: 1px solid black;
+     margin-left: 2px;
+     margin-right: 8px;
+ }
+.row .col-sm-9{
+    padding-left: 0px;
+}
+.col-sm-3 img{
+    margin-top: 10px;
+width: 100%;
+}
+
+.l_1 img{
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.l_2{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    height: 160px;
+    border: 1px solid black;
+}
+.l_2 p {
+    font-size: 12px;
+}

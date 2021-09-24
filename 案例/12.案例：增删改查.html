@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin: 100px auto;
+        }
+
+        th,
+        td {
+            border-style: solid;
+        }
+
+        #xia {
+            margin: 0 auto;
+            border: 1px solid;
+            width: 400px;
+            text-align: center;
+        }
+    </style>
+    <script>
+
+        window.onload = function () {
+
+            //1.当点击删除按钮时，返回‘确认删除’+名字+‘吗？’
+            let a = document.getElementsByTagName('a')
+
+            function del() {
+                let tr = this.parentNode.parentNode;
+                let name = tr.firstElementChild.innerHTML;
+                if (confirm(`确认删除【${name}】吗？`)) {
+                    // 删除tr
+                    tr.remove();
+                }
+                // 取消超链接默认跳转行为
+                return false;
+            }
+
+            for (let i = 0; i < a.length; i++) {
+
+                a[i].onclick = del;  //<3 0 1 2
+
+            }
+
+
+            let submit = document.getElementById('submit')
+            //2.添加新员工
+            submit.onclick = function () {
+                // alert('a ')
+                let name = document.getElementById('name').value;
+                let email = document.getElementById('email').value;
+                let salary = document.getElementById('salary').value;
+                /*
+                    *
+                    * 	<tr>
+                            <td>Tom</td>
+                            <td>tom@tom.com</td>
+                            <td>5000</td>
+                            <td><a href="deleteEmp?id=001">Delete</a></td>
+                        </tr>
+                    * */
+                let newTr = document.createElement('tr');
+                newTr.innerHTML =
+                    '<td>' + name + '</td>' +
+                    '<td>' + email + '</td>' +
+                    '<td>' + salary + '</td>' +
+                    '<td><a href="javasccript:;">' + 'Delete' + '</a></td>'
+                let link = newTr.getElementsByTagName('a')[0];
+                link.onclick = del;
+
+
+                //获取到table里面的第一个空白子节点 在该空白子节点后面添加新信息
+                let table = document.getElementById('table');
+                let tbody = document.getElementsByTagName('tbody')[0];
+                // alert(tbody.length)
+                tbody.appendChild(newTr)
+
+
+
+
+            }
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="cs"></div>
+    <table cellspacing="0" border="1" id="table">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>tom@tom.com</td>
+            <td>5000</td>
+            <td><a href="deleteEmp?id=001">Delete</a></td>
+        </tr>
+        <tr>
+            <td>Jerry</td>
+            <td>jerry@sohu.com</td>
+            <td>8000</td>
+            <td><a href="deleteEmp?id=002">Delete</a></td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>bob@tom.com</td>
+            <td>10000</td>
+            <td><a href="deleteEmp?id=003">Delete</a></td>
+        </tr>
+    </table>
+
+    <div id="xia">
+        <p>添加新员工</p>
+        <p>name: <input type="text" id="name" name="name"> </p>
+        <p>email: <input type="text" id="email" name="email"> </p>
+        <p>salary: <input type="text" id="salary" name="salary"> </p>
+        <button type="submit" id="submit">提交</button>
+
+    </div>
+</body>
+
+</html>

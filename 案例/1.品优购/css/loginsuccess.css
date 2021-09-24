@@ -1,0 +1,22 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 用CSS3盒子模型padding和border不会撑大盒子 */
+    box-sizing:border-box;
+}
+.w {
+    width:1200px;
+    margin:0 auto;
+}
+.nav{
+    height: 84px;
+    border-bottom: 2px solid #AF191B;
+    line-height: 84px;
+
+}
+.welcome{
+    margin: 100px 500px;
+    font-size: 30px;
+    width: 100%;
+}

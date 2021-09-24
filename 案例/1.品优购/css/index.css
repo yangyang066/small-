@@ -1,0 +1,331 @@
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?61dok8');
+  src:  url('../fonts/icomoon.eot?61dok8#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?61dok8') format('truetype'),
+    url('../fonts/icomoon.woff?61dok8') format('woff'),
+    url('../fonts/icomoon.svg?61dok8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+/* 轮播图开始 */
+
+.nav .w .dd .meme {
+    display: inline-block;
+    font-size: 700;
+    height: 40px;
+    color: blue;
+    background-color: chartreuse;
+}
+.header .meme {
+    display: inline-block;
+    font-size: 700;
+    height: 40px;
+    color: blue;
+    background-color: chartreuse;
+}
+.main{
+    width: 980px;
+    height: 455px;
+    margin-top: 8px;
+    margin-left: 220px;
+}
+.main .pre {
+    position: absolute;
+    margin-top: 177px;
+    width: 40px;
+    height: 70px;
+    background: url(../upload/icon-slides.png) no-repeat -83px 0;
+    z-index: 999;
+}
+
+.main .nex {
+    position: absolute;
+    width: 40px;
+    height: 70px;
+    background: url(../upload/icon-slides.png) no-repeat -125px 0;
+    margin-top: 177px;
+    right: 0;
+    z-index: 999;
+}
+
+.main .pre:hover {
+    background: url(../upload/icon-slides.png) no-repeat 0px 0;
+}
+
+.main .nex:hover {
+    background: url(../upload/icon-slides.png) no-repeat -42px 0;
+}
+
+.pointer {
+    position: absolute;
+    z-index: 999;
+    right: 35px;
+    bottom: 26px;
+}
+
+.pointer a {
+    float: left;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, .4);
+    border: 2px rgba(255, 255, 255, .3) solid;
+    margin-left: 8px;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+
+.lb .pointer a:hover,
+.lb .pointer a.active {
+    background-color: #fff;
+}
+
+.main .lb {
+    position: relative;
+    float: left;
+    width: 721px;
+    height: 455px;
+
+}
+
+.main .lb li {
+    position: absolute;
+
+    /* 设置图片切换时有淡出淡入的效果 
+                 淡出 opacity 1-->0
+                 淡入 opacity 0==>1 
+    */
+    transition: opacity 1s;
+    /*  当opacity属性发生变化时才生效*/
+    opacity: 0;
+}
+
+.main .lb li:first-child {
+    z-index: 1;
+    opacity: 1
+}
+/* 轮播图结束 */
+.main .news{
+    float: right;
+    width: 248px;
+    height: 374px;
+    border:solid 1px #e4e4e4;
+    overflow: hidden;
+}
+.main  .news1{
+    height: 167px;
+    width: 248px;
+}
+.main  .news1 .news1_top{
+    border-bottom: 1px dotted #e4e4e4;
+    height: 34px;
+    width: 100%;
+    line-height: 34px;
+}
+.main .news1_top h5{
+    float: left;
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.main .news1_top a{
+    float: right;
+    margin-right: 12px;
+}
+.main .news1_top a::after{
+    content: "\e920";
+    font-family: 'icomoon';
+
+}
+.main .news1_bottom{
+    height: 133px;
+    width:100% ;
+    border-bottom: 1px solid #e4e4e4;
+
+}
+.main .news1_bottom li{
+    padding-top: 8px;
+    padding-left: 15px;
+ 
+}
+.main .news1_bottom h5{
+    float: left;
+    margin-right: 5px;
+
+}
+.main .news1_bottom p{
+    margin-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.main  .news2{
+    height: 209px;
+    width: 248px;
+  
+
+}
+.main  .news2 li{
+  position: relative;
+    float: left;
+    width: 62px;
+    height: 70px;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 80px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+.main  .news2 span{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../images/icons.png) no-repeat -17px -15px;
+
+}
+
+.news3 img{
+    float: right;
+    height: 73px;
+    width: 248px;
+    margin-top:6px;
+    overflow: hidden;
+}
+/* 推荐模块开始 */
+.rcommd{
+    margin-top: 10px;
+    height: 163px;
+    width: 100%;
+    background-color: #EDEDED ;
+}
+.rcommd .rcommd_l{
+    float: left;
+    width: 206px;
+    height: 163px;
+    background-color: #5C5251;
+    padding-top: 30px;
+  text-align: center;
+   
+}
+.rcommd .rcommd_l p{
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.rcommd .rcommd_r img{
+    float: left;
+    width: 246px;
+    height: 163px;
+
+}
+.rcommd .rcommd_r  li:nth-child(even)::after{
+    float: left;
+    content: "";
+    margin-top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+    
+}
+/* 推荐模块结束 */
+
+
+/* floor模块开始 */
+.jiadian{
+    margin-top: 18px;
+}
+.jiadian_a{
+    height: 38px;
+    line-height: 38px;
+    border-bottom:2px solid #C81623 ;
+}
+.jiadian_a p{
+    float: left;
+    font-size: 18px;
+    color: #cc2632;
+
+}
+.jiadian_a .tab_list{
+    float: right;
+}
+
+.jiadian_a .tab_list li{
+    float: left;
+    
+}
+.jiadian_a .tab_list a{
+    padding:0 15px; 
+}
+.jiadian_b{
+    height: 360px; 
+    text-align: center;
+}
+.jiadian_b .b_1{
+    float: left;
+    width: 210px;
+    height: 100%;
+    background-color: #f9f9f9;
+}
+.jiadian_b .b_1 li{
+    float: left;
+    width: 86px;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 12px;
+    border-bottom:1px solid #ccc;
+}
+
+.jiadian_b .b_2{
+    float: left;
+    width: 330px;
+    height: 100%;
+
+}
+.jiadian_b .b_3{
+    float: left;
+    width: 220px;
+    height: 100%;
+  
+}
+.img_bottom{
+    display: inline-block;
+    border-bottom: solid 1px #ccc;
+}
+
+.jiadian_b .b_4{
+    float: left;
+    width: 220px;
+    height: 100%;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+}
+.jiadian_b .b_5{
+    float: left;
+    width: 220px;
+    height: 100%;
+    /* border-left: 1px solid #ccc; */
+    
+}
+/* floor模块结束 */
+
+/* 回到顶部开始 */
+.to_top{
+    position: fixed;
+    text-align: center;
+    line-height: 25px;
+    z-index: 1000;
+    width: 30px;
+    font: 22px arial;
+    height: 120px;
+    bottom: 100px;
+    right: 0;
+background-color: pink;
+/* 鼠标变小手 */
+cursor: pointer;
+}
+/* 回到顶部结束 */

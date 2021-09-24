@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .map {
+            position: relative;
+            width: 747px;
+            height: 616px;
+            background: url(media/map.png) no-repeat;
+            margin: 0 auto;
+        }
+
+        .a {
+            position: absolute;
+            top: 230px;
+            right: 195px;
+            color: white;
+
+        }
+
+        .dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: #09f;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .a1,
+        .a2,
+        .a3 {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #009dfd;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: aa 1.3s linear infinite;
+
+        }
+
+
+
+        .a2 {
+            animation-delay: 0.4s;
+        }
+
+        .a3 {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes aa {
+            0% {}
+
+            70% {
+
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="a">
+            <div class="dot"></div>
+            <div class="a1"> </div>
+            <div class="a2"></div>
+            <div class="a3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

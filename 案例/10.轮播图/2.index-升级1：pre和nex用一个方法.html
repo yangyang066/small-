@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .main {
+        width: 980px;
+        height: 455px;
+        margin-top: 8px;
+        margin-left: 220px;
+    }
+
+    .main .pre {
+        position: absolute;
+        margin-top: 177px;
+        width: 40px;
+        height: 70px;
+        background: url(upload/icon-slides.png) no-repeat -83px 0;
+        z-index: 999;
+    }
+
+    .main .nex {
+
+        position: absolute;
+        width: 40px;
+        height: 70px;
+        background: url(upload/icon-slides.png) no-repeat -125px 0;
+        margin-top: 177px;
+        right: 0;
+        z-index: 999;
+    }
+
+    .main .pre:hover {
+        background: url(upload/icon-slides.png) no-repeat 0px 0;
+    }
+
+    .main .nex:hover {
+        background: url(upload/icon-slides.png) no-repeat -42px 0;
+    }
+
+    .pointer {
+        position: absolute;
+        z-index: 999;
+        right: 35px;
+        bottom: 26px;
+    }
+
+    .pointer a {
+        float: left;
+        width: 6px;
+        height: 6px;
+        background-color: rgba(0, 0, 0, .4);
+        border: 2px rgba(255, 255, 255, .3) solid;
+        margin-left: 8px;
+        border-radius: 50%;
+        background-clip: padding-box;
+    }
+
+    .lb .pointer a:hover,
+    .lb .pointer a.active {
+        background-color: #fff;
+    }
+
+    .main .lb {
+        position: relative;
+        float: left;
+        width: 721px;
+        height: 455px;
+
+    }
+
+    .main .lb li {
+        position: absolute;
+
+        /* 设置图片切换时有淡出淡入的效果 
+                     淡出 opacity 1-->0
+                     淡入 opacity 0==>1 
+        */
+        transition: opacity 1s;
+        /*  当opacity属性发生变化时才生效*/
+        opacity: 0;
+    }
+
+    .main .lb li:first-child {
+        z-index: 1;
+        opacity: 1
+    }
+</style>
+
+<body>
+    <div class="main ">
+
+        <div class="lb">
+            <ul>
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb1.png" alt=""></a></li><!-- li[0] -->
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb2.png" alt=""></a></li><!-- li[1] -->
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb3.png" alt=""></a></li><!-- li[2] -->
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb4.png" alt=""></a></li><!-- li[3] -->
+                <li class="lbli"><a href="javascript:;"><img src="upload/lb5.png" alt=""></a></li><!-- li[4] -->
+            </ul>
+            <div class="pre"></div>
+            <div class="nex"></div>
+            <div class="pointer">
+                <a class="active" href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let lbli = document.getElementsByClassName('lbli')//获取到5个li 
+        // alert(lbli.length)  //5
+        let pointerA = document.querySelectorAll('.pointer a');
+        let lbindex = 0;
+
+
+        //点击pre按钮切换为上一张
+        let pre = document.querySelector('.lb .pre')
+        pre.addEventListener('click', function () {
+            yh(lbindex - 1)
+        })
+
+
+        // 点击nex按钮轮播图切换为下一张
+        let nex = document.querySelector('.lb .nex')
+        nex.addEventListener('click', function () {
+            yh(lbindex + 1)
+        })
+
+        //需要一个参数index表示要切换到的图片，此函数做的是切换到我们想切换到哪张图片
+        //lbindex表示我们当前这张，index表示我们想切换到的图片
+        function yh(index) {
+            //检查index是否合法（越界）
+
+            if (index < 0) {
+                index = lbli.length - 1
+            } else if (index > lbli.length - 1) {
+                index = 0;
+
+            }
+            //将之前显示的图片的zIndex取消
+            lbli[lbindex].style.zIndex = ''
+            //将之前选中的导航点取消
+            pointerA[lbindex].className = ''
+            //将之前图片的不透明度设置为1
+            lbli[lbindex].style.opacity = 0
+
+            // lbindex++;
+            // if (lbindex === lbli.length) {
+            //     lbindex = 0;
+            // }
+
+            //设置当前图片的zIndex为1
+            lbli[index].style.zIndex = 1
+            //设置当前的导航点显示
+            pointerA[index].className = ' active'
+            //设置当前图片不透明度为1
+            lbli[index].style.opacity = 1
+
+            //将lbIndex修改为index
+            lbindex = index;
+
+        }
+    </script>
+</body>
+
+</html>
